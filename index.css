@@ -1,0 +1,361 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+header {
+  display: flex;
+  background-color: cornsilk;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0.5em;
+}
+#hdr-content img { 
+  width: 4em; 
+  height: 4em; 
+}
+#hdr-content {
+  display: flex;
+  align-items: center;
+  font-size: 1.25rem;
+  gap: 3em;
+}
+#hdr-content a {
+  color:grey;
+  text-decoration: none;
+}
+.search-container {
+  position: relative;
+  width: 20%;
+}
+.search-container input {
+  width: 100%;
+  border-radius: 2em;
+  padding: 0.5em;
+}
+.search-container i {
+  position: absolute;
+  right: 10%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.banner img{
+  width: 100%;
+  height: 50%;
+}
+.banner-text {
+  position: absolute;
+  top: 20%;
+  right: 18%;
+  font-size: 2.25rem;
+  font-weight: 600;
+  color: darkblue;
+}
+.welcome {
+  text-align: center;
+  padding: 2em;
+}
+.welcome h1 {
+  font-size: 2rem;
+  color: green;
+}
+.description {
+  font-size: 1.1rem;
+  width: 80%;
+  margin: 1.5em auto;
+}
+.dashboard {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2em;
+  padding: 2em;
+  background-color: lightgrey;
+}
+.db-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 8em;
+  padding: 1em;
+  border-radius: 1em;
+  background-color: white;
+  text-align: center;
+}
+.db-box:hover {
+  transform: translateY(-0.3em);
+}
+.db-icon {
+  font-size: 2.25rem;
+  padding: 0.5em;
+}
+.activities {
+  padding-top: 1em;
+  text-align: center;
+  background-color: lightgrey;
+}
+.activities h1 {
+    font-size: 2rem;
+    color: green;
+  }
+.act-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 1em;
+  gap: 2em;
+}
+.acards {
+  background-color: white;
+  border-radius: 1.25em;
+  width: 20%;
+  padding: 1em;
+}
+.aicons {
+  font-size: 2.25rem;
+  padding: 0.5em;
+}
+.acards:hover {
+  transform: translateY(-0.5em);
+}
+.more-btn {
+  background-color: green;
+  color: white;
+  padding: 0.8em;
+  border: none;
+  border-radius: 0.5em;
+  font-size: 0.8em;
+  cursor: pointer;
+}
+.more-btn:hover {
+  background-color: darkgreen;
+  transform: translateY(-0.3em);
+}
+#elearning h1 {
+    font-size: 2rem;
+    color: green;
+  }
+#elearning {
+  padding-top: 1.5em;
+  text-align: center;
+  background-color: lightgrey;
+}
+.ecards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0.5em;
+  gap: 2em;
+  margin-top: 1em;
+}
+.ecards {
+  background-color: white;
+  border-radius: 1.25em;
+  width: 20%;
+  padding: 1em;
+}
+.eicons {
+  font-size: 2.25rem;
+  padding: 0.5em;
+}
+.ecards:hover {
+  transform: translateY(-0.3em);
+}
+.gallery h1 {
+    font-size: 2rem;
+    color: green;
+    text-align: center;
+  }
+.gallery {
+  padding: 1.5em;
+  background-color: lightgray;
+}
+.gallery p {
+  font-size: 1.1em;
+  text-align: center;
+  padding: 1em;
+}
+.gallery-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2em;
+  background-color: lightgray;
+}
+.gallery-container img { 
+  border-radius: 0.5em;
+  transition: 0.4s ease;
+  cursor: pointer;
+}
+.gallery-container img:hover {
+  transform: scale(1.1);
+}
+#footer { 
+  background-color: cornsilk; 
+  color: gray; 
+  padding: 2em;
+} 
+.footer-content { 
+  display: flex; 
+  justify-content: space-around; 
+  font-size: 1em;
+  color: gray;
+} 
+.footer-logo img { 
+  width: 100px; 
+  height: 100px; 
+} 
+.footer-column a {
+  color: gray;
+  text-decoration: none;
+}
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 2em;
+}
+.footer-icons a {
+  font-size: 1.25em;
+  color: gray;
+  padding: 0.5em;
+  border-radius: 50%;
+}
+
+@media (max-width: 1024px) {
+  #hdr-content {
+    gap: 1.5em;
+    font-size: 1rem;
+  }
+  .banner-text {
+    top: 15%;
+    right: 10%;
+    font-size: 1.7em;
+  }
+  .description {
+    width: 90%;
+  }
+  .dashboard {
+    gap: 1.5em;
+  }
+}
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1em;
+  }
+  #hdr-content {
+    flex-wrap: wrap;
+    gap: 1em;
+    font-size: 1rem;
+  }
+  .banner-text {
+    top: 18%;
+    right: 10%;
+    font-size: 0.8em;
+  }
+  .search-container {
+    width: 50%;
+  }
+  .banner img {
+    height: 50vh;
+    object-fit: cover;
+  }
+  .banner-text {
+    position: absolute;
+    text-align: center;
+    margin-top: 10%;
+    font-size: 1.75rem;
+  }
+  .welcome h1 {
+    font-size: 2rem;
+  }
+  .description {
+    width: 95%;
+    font-size: 1rem;
+  }
+  .dashboard {
+    flex-direction: column;
+    align-items: center;
+  }
+  .act-container {
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5em;
+    width: 50%;
+  }
+  .acards {
+    margin-left: 12em;
+    width: 80%;
+    font-size: 0.9rem;
+  }
+    .ecards-container {
+    flex-direction: column;
+    gap: 1.5em;
+    width: 50%;
+  }
+  .ecards {
+    margin-left: 12em;
+    width: 80%;
+    font-size: 0.9rem;
+  }
+  .gallery-container img {
+    width: 50%;
+    height: 50%;
+  }
+  .footer-content, .footer-bottom {
+    flex-direction: column;
+    gap: 1em;
+    align-items: center;
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 480px) {
+  header{
+    align-items: center;
+  }
+  #hdr-content {
+    flex-direction: column;
+    gap: 0.5em;
+  }
+  .banner img {
+    height: 40vh;
+  }
+  .banner-text {
+    position: absolute;
+    top: 17.2em;
+    right: 2em;    
+    font-size: 1.25rem;
+  }
+  .welcome h1 {
+    font-size: 1.5rem;
+  }
+  .activities h1 {
+    font-size: 1.5rem;
+  }
+  #elearning h1 {
+    font-size: 1.5rem;
+  }
+  .gallery h1 {
+    font-size: 1.5rem;
+  }
+  .acards {
+    width: 100%;
+    margin-left: 6em;
+  }
+  .ecards {
+    width: 100%;
+    margin-left: 6em;
+  }
+  .gallery-container {
+    gap: 1em;
+  }
+  .footer-logo img {
+    width: 25%;
+    height: auto;
+  }
+  .footer-content, .footer-bottom {
+    text-align: center;
+    font-size: 0.7rem;
+  }
+}
