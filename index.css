@@ -10,17 +10,17 @@ header {
   align-items: center;
   padding: 0.5em;
 }
-#hdr-content img { 
-  width: 4em; 
-  height: 4em; 
-}
-#hdr-content {
+.hdr-content {
   display: flex;
   align-items: center;
   font-size: 1.25rem;
   gap: 3em;
 }
-#hdr-content a {
+.hdr-content img { 
+  width: 4em; 
+  height: 4em; 
+}
+.hdr-content a {
   color:grey;
   text-decoration: none;
 }
@@ -64,58 +64,40 @@ header {
   width: 80%;
   margin: 1.5em auto;
 }
-.dashboard {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2em;
-  padding: 2em;
-  background-color: lightgrey;
-}
-.db-box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 8em;
-  padding: 1em;
-  border-radius: 1em;
-  background-color: white;
-  text-align: center;
-}
-.db-box:hover {
-  transform: translateY(-0.3em);
-}
-.db-icon {
-  font-size: 2.25rem;
-  padding: 0.5em;
-}
-.activities {
+.dashboard, .activities, .elearning, .gallery {
   padding-top: 1em;
+  justify-content: center;
   text-align: center;
+  align-items: center;
   background-color: lightgrey;
 }
-.activities h1 {
+.activities h1, .elearning h1, .gallery h1 {
     font-size: 2rem;
     color: green;
   }
-.act-container {
+.db-container, .act-container, .ecards-container, .gallery-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   padding: 1em;
   gap: 2em;
 }
-.acards {
-  background-color: white;
-  border-radius: 1.25em;
-  width: 20%;
+.dbcards, .acards, .ecards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 12em;
   padding: 1em;
+  text-align: center;
+  transition: transform 0.3s ease;
+  background-color: white;
+  border-radius: 1em;
 }
-.aicons {
+.dbicons, .aicons, .eicons {
   font-size: 2.25rem;
   padding: 0.5em;
 }
-.acards:hover {
+.dbcards:hover, .acards:hover, .ecards:hover {
   transform: translateY(-0.5em);
 }
 .more-btn {
@@ -131,57 +113,6 @@ header {
   background-color: darkgreen;
   transform: translateY(-0.3em);
 }
-#elearning h1 {
-    font-size: 2rem;
-    color: green;
-  }
-#elearning {
-  padding-top: 1.5em;
-  text-align: center;
-  background-color: lightgrey;
-}
-.ecards-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 0.5em;
-  gap: 2em;
-  margin-top: 1em;
-}
-.ecards {
-  background-color: white;
-  border-radius: 1.25em;
-  width: 20%;
-  padding: 1em;
-}
-.eicons {
-  font-size: 2.25rem;
-  padding: 0.5em;
-}
-.ecards:hover {
-  transform: translateY(-0.3em);
-}
-.gallery h1 {
-    font-size: 2rem;
-    color: green;
-    text-align: center;
-  }
-.gallery {
-  padding: 1.5em;
-  background-color: lightgray;
-}
-.gallery p {
-  font-size: 1.1em;
-  text-align: center;
-  padding: 1em;
-}
-.gallery-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2em;
-  background-color: lightgray;
-}
 .gallery-container img { 
   border-radius: 0.5em;
   transition: 0.4s ease;
@@ -190,7 +121,7 @@ header {
 .gallery-container img:hover {
   transform: scale(1.1);
 }
-#footer { 
+.footer { 
   background-color: cornsilk; 
   color: gray; 
   padding: 2em;
@@ -220,9 +151,8 @@ header {
   padding: 0.5em;
   border-radius: 50%;
 }
-
 @media (max-width: 1024px) {
-  #hdr-content {
+  .hdr-content {
     gap: 1.5em;
     font-size: 1rem;
   }
@@ -234,17 +164,17 @@ header {
   .description {
     width: 90%;
   }
-  .dashboard {
+  .db-container {
     gap: 1.5em;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 850px) {
   header {
     flex-direction: column;
     align-items: flex-start;
     padding: 1em;
   }
-  #hdr-content {
+  .hdr-content {
     flex-wrap: wrap;
     gap: 1em;
     font-size: 1rem;
@@ -267,37 +197,29 @@ header {
     margin-top: 10%;
     font-size: 1.75rem;
   }
-  .welcome h1 {
-    font-size: 2rem;
+  .welcome h1, .activities h1, .elearning h1, .gallery h1 {
+    font-size: 1.25rem;
   }
-  .description {
-    width: 95%;
+  .description, .activities p, .elearning p, .gallery p {
+    width: 80%;
+    text-align: center;
     font-size: 1rem;
   }
-  .dashboard {
+  .activities h3, .elearning h3, .db-icons-p{
+    font-size: 0.95rem;;
+  }
+  .db-container, .act-container, .ecards-container {
     flex-direction: column;
     align-items: center;
+    gap: 1.2em;
   }
-  .act-container {
-    flex-direction: column;
-    justify-content: center;
-    gap: 1.5em;
-    width: 50%;
+  .dbcards, .acards, .ecards {
+    width: 10em;
+    padding: 1em;
   }
-  .acards {
-    margin-left: 12em;
-    width: 80%;
-    font-size: 0.9rem;
-  }
-    .ecards-container {
-    flex-direction: column;
-    gap: 1.5em;
-    width: 50%;
-  }
-  .ecards {
-    margin-left: 12em;
-    width: 80%;
-    font-size: 0.9rem;
+  .dbicons, .aicons, .eicons {
+    font-size: 1.75rem;
+    padding: 0.35em;
   }
   .gallery-container img {
     width: 50%;
@@ -307,6 +229,8 @@ header {
     flex-direction: column;
     gap: 1em;
     align-items: center;
+    justify-content: center;
+    text-align: center;
     font-size: 0.8rem;
   }
 }
@@ -314,9 +238,10 @@ header {
   header{
     align-items: center;
   }
-  #hdr-content {
+  .hdr-content {
     flex-direction: column;
     gap: 0.5em;
+    font-size: 0.9rem;
   }
   .banner img {
     height: 40vh;
@@ -327,25 +252,29 @@ header {
     right: 2em;    
     font-size: 1.25rem;
   }
-  .welcome h1 {
-    font-size: 1.5rem;
+  .welcome h1, .activities h1, .elearning h1, .gallery h1 {
+    font-size: 1rem;
   }
-  .activities h1 {
-    font-size: 1.5rem;
+  .description, .activities p, .elearning p, .gallery p {
+    font-size: 0.85rem;
   }
-  #elearning h1 {
-    font-size: 1.5rem;
+  .activities h3, .elearning h3, .db-icons-p{
+    font-size: 0.9rem;;
   }
-  .gallery h1 {
-    font-size: 1.5rem;
+  .db-container, .act-container, .ecards-container {
+    gap: 1em;
   }
-  .acards {
-    width: 100%;
-    margin-left: 6em;
+  .dbcards, .acards, .ecards {
+    width: 8em;
+    padding: 0.75em;
   }
-  .ecards {
-    width: 100%;
-    margin-left: 6em;
+  .dbicons, .aicons, .eicons {
+    font-size: 1.3rem;
+    padding: 0.25em;
+  }
+  .more-btn {
+    padding: 0.7em;
+    font-size: 0.7em;
   }
   .gallery-container {
     gap: 1em;
@@ -355,7 +284,6 @@ header {
     height: auto;
   }
   .footer-content, .footer-bottom {
-    text-align: center;
     font-size: 0.7rem;
   }
 }
