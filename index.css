@@ -200,13 +200,17 @@ header {
   .welcome h1, .activities h1, .elearning h1, .gallery h1 {
     font-size: 1.25rem;
   }
-  .description, .activities p, .elearning p, .gallery p {
+  .description {
     width: 80%;
     text-align: center;
     font-size: 1rem;
   }
   .activities h3, .elearning h3, .db-icons-p{
     font-size: 0.95rem;;
+  }
+  .activities p, .elearning p, .gallery p {
+    text-align: center;
+    font-size: 1rem;
   }
   .db-container, .act-container, .ecards-container {
     flex-direction: column;
